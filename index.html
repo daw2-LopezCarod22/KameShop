@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>KameShop</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">KameShop</a>
+                <button class="navbar-toggler custom-toggler" type="buttowsn" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="listaMenu" class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="html/resultadoBusqueda.html?Figuras">Figuras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="html/resultadoBusqueda.html?Manga">Manga</a></li>
+                        <li class="nav-item"><a class="nav-link" href="html/resultadoBusqueda.html?DVD/Blu-Ray">DVD/Blu-Ray</a></li>
+                        <li class="nav-item"><a class="nav-link" href="html/resultadoBusqueda.html?Merchandising">Merchandising</a></li>
+                       <li id="carrito"> <a href="html/carrito.html"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-1 fw-bolder">KameShop</h1>
+                    <p id="subtitulo" class=" display-5 text-white-50">Tu tienda de confianza</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section id="producto" class="py-5">
+            <div id="bienvenida">
+            </div>
+            <div class="container px-4 mt-3 py-5">
+                <h2>Ultimas novedades</h2>
+                <div id="novedades" class="row row-cols-2 row-cols-xl-4">
+                </div> 
+            </div>       
+        </section>
+        <!-- pie de pagina -->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; KameShop 2022</p></div>
+        </footer>
+        <script type="module" src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.14/dist/sweetalert2.all.min.js" integrity="sha256-SlWNZPkXxEDQLgOBLlO07HAeNx6ThxLZ+pqQ+VGUEuU=" crossorigin="anonymous"></script>
+    </body>
+</html>

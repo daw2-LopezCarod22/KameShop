@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Crear producto</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../index.html">KameShop</a>
+                <button class="navbar-toggler custom-toggler" type="buttowsn" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="listaMenu" class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="resultadoBusqueda.html">Figuras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resultadoBusqueda.html">Manga</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resultadoBusqueda.html">DVD/Blu-Ray</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resultadoBusqueda.html">Merchandising</a></li>                        <li id="carrito"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 offset-md-4">
+                <div class="row">
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Crear nuevo producto</h5>
+                            <div class="py-3">
+                                <label for="name">Imagen del producto:</label>
+                                <br>
+                                <form id="formArchivos" action='http://localhost:8000/files/upload' method="POST" enctype="multipart/form-data">
+                                    <input type="file" name="file" id="archivo" class="form-control">
+                                </form>
+                            </div>
+                            <div class="py-3">
+                                <label for="name">Nombre del producto:</label>
+                                <br>
+                                <div id="nombre">
+                                    <input id="inputNombre" type="text" size="40" name="nombreProducto" required>
+                                </div>
+                            </div>
+                            <div class="py-3">
+                                <label for="name">Fabricante:</label>
+                                <br>
+                                <div id="fabricante">
+                                    <input id="inputFabricante" type="text" size="40" name="fabricanteProducto" required>
+                                </div>    
+                            </div>
+                            <div class="py-3">
+                                <label for="name">Descripcion:</label>
+                                <br>
+                                <div id="descripcion">
+                                    <textarea id="inputDescripcion" name="descripcionProducto" required></textarea>
+                                </div>
+                            </div>
+                            <div class="py-3">
+                                <label for="name">Stock:</label>
+                                <br>
+                                <div id="stock">
+                                    <input id="inputStock" min="1" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                </div>    
+                            </div>
+                            <div class="py-3">
+                                <label for="name">Precio:</label>
+                                <br>
+                                <div id="precio">
+                                    <input id="inputPrecio" min="0" step="any" type="number" name="precioProducto" required>
+                                </div>
+                            </div>
+                            <div class="py-3">
+                                <label for="name">Tipo de producto:</label>
+                                <br>
+                                <div id="tipo">
+                                    <select id="inputTipo" name="tipoProducto">
+                                        <option value="Figuras">Figuras</option>
+                                        <option value="Manga">Manga</option>
+                                        <option value="DVD/Blu-Ray">DVD/Blu-Ray</option>
+                                        <option value="Merchandising">Merchandising</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="botonConfirmacion" class="text-center py-3">
+                                <button id="crearProducto" type="button" class="btn btn-primary">Crear producto</button>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+        <!-- pie de pagina -->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; KameShop 2022</p></div>
+            <script type="module" src="../js/crearProducto.js"></script>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.14/dist/sweetalert2.all.min.js" integrity="sha256-SlWNZPkXxEDQLgOBLlO07HAeNx6ThxLZ+pqQ+VGUEuU=" crossorigin="anonymous"></script>
+        </body>
+</html>
