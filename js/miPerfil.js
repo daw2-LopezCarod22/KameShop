@@ -1,6 +1,6 @@
 import {cambiosMenus} from './cambiosMenu.js';
 cambiosMenus();
-const url = `http://localhost:8000/auth/me/`;
+const url = `https://kameshop-api.herokuapp.com/auth/me/`;
 var token = localStorage.getItem('token')
 fetch(url, {
     method: "GET",
@@ -30,7 +30,7 @@ function guardarCambiosPefil(){
         "email": document.getElementById('inputEmail').value,
         "password": document.getElementById('inputPassword').value
     }
-    const url = `http://localhost:8000/auth/update`;
+    const url = `https://kameshop-api.herokuapp.com/auth/update`;
     fetch(url, {
         method: "PUT",
         body: JSON.stringify(usuario),

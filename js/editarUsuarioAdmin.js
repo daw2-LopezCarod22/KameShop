@@ -2,7 +2,7 @@ import {cambiosMenus} from './cambiosMenu.js';
 cambiosMenus(true);
 var idUsuario = window.location.search.split('?')[1];
 var token = localStorage.getItem('token');
-const url = `http://localhost:8000/users/${idUsuario}`;
+const url = `https://kameshop-api.herokuapp.com/${idUsuario}`;
 if (idUsuario=='crear'){
     document.getElementById('titulo').innerHTML = `<h5 class="card-title">Crear nuevo usuario:</h5>`
 
@@ -80,7 +80,7 @@ function guardarCambiosEdit(username, email, password, rol, id){
         "password": password,
         "roles": [rol]
     }
-    const url = `http://localhost:8000/users/${id}`;
+    const url = `https://kameshop-api.herokuapp.com/users/${id}`;
     fetch(url, {
         method: "PUT",
         body: JSON.stringify(usuario),
@@ -109,7 +109,7 @@ function crearUsuario(username, email, password, rol){
         "password": password,
         "roles":[rol]
     };
-    const url = `http://localhost:8000/users`;
+    const url = `https://kameshop-api.herokuapp.com/users`;
     fetch(url, {
         method: "POST",
         body: JSON.stringify(user),

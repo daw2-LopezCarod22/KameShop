@@ -7,7 +7,7 @@ document.getElementById('registrarse').onclick = function(){
         "password": document.getElementById('inputPassword').value,
         "roles":["normal"]
     };
-    const url = `http://localhost:8000/auth/register`;
+    const url = `https://kameshop-api.herokuapp.com/auth/register`;
         fetch(url, {
             method: "POST",
             body: JSON.stringify(user),

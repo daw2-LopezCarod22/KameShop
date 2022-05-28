@@ -14,7 +14,7 @@ function borrarUsuario(username, id){
 }
 
 function confirmarEliminar(username, id){
-    const url = `http://localhost:8000/users/${id}`;
+    const url = `https://kameshop-api.herokuapp.com/users/${id}`;
     var token = localStorage.getItem('token')
     fetch(url, {
         method: "DELETE",

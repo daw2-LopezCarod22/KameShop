@@ -2,7 +2,7 @@ import {borrarProducto} from './borrarProducto.js';
 import {anadirCarrito} from './anadirCarrito.js'
 
 function listarProductos(vieneDe){
-    fetch(`http://localhost:8000/productos`)
+    fetch(`https://kameshop-api.herokuapp.com/productos`)
         .then((resultado) => resultado.json())
         .then((json) => añadirProducto(json, vieneDe));
 }

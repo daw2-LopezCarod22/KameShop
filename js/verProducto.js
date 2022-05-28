@@ -3,7 +3,7 @@ import {anadirCarrito} from './anadirCarrito.js'
 
 cambiosMenus();
 var idProducto = window.location.search.split('?')[1];
-fetch(`http://localhost:8000/productos/${idProducto}`)
+fetch(`https://kameshop-api.herokuapp.com/productos/${idProducto}`)
 .then((resultado) => resultado.json())
 .then((json) => mostrarProducto(json));
 

@@ -2,7 +2,7 @@ import {cambiosMenus} from './cambiosMenu.js';
 cambiosMenus();
 if(window.location.search.split('?')[1]){
     var idProducto = window.location.search.split('?')[1];
-    fetch(`http://localhost:8000/productos/${idProducto}`)
+    fetch(`https://kameshop-api.herokuapp.com/${idProducto}`)
     .then((resultado) => resultado.json())
     .then((json) => editarProducto(json, idProducto));
 }
@@ -54,7 +54,7 @@ function editarProducto(json, id){
         f.append('type' , 'producto')
         var token = localStorage.getItem('token')
         
-        var url="http://localhost:8000/files/upload"
+        var url="https://kameshop-api.herokuapp.com/files/upload"
         fetch(url, {
             method: "POST",
             body: f,
@@ -82,12 +82,11 @@ function editarProducto(json, id){
             "tipo_producto": document.getElementById('inputTipo').value,
             "fabricante": document.getElementById('inputFabricante').value,
             "precio": document.getElementById('inputPrecio').value,
-            "vendidos": 0,
             "images": objetoImagen.url,
             "stock": document.getElementById('inputStock').value,
             "descripcion": document.getElementById('inputDescripcion').value
         }
-        const url = `http://localhost:8000/productos/${id}`;
+        const url = `https://kameshop-api.herokuapp.com/productos/${id}`;
         fetch(url, {
             method: "PUT",
             body: JSON.stringify(producto),
@@ -110,9 +109,6 @@ function editarProducto(json, id){
     }
 }
 
-
-
-
 document.getElementById('crearProducto').onclick = function(){
     const archivo = document.getElementById('archivo').files[0]
     var f = new FormData() 
@@ -120,7 +116,7 @@ document.getElementById('crearProducto').onclick = function(){
     f.append('type' , 'producto')
     var token = localStorage.getItem('token')
     
-    var url="http://localhost:8000/files/upload"
+    var url="https://kameshop-api.herokuapp.com/files/upload"
     fetch(url, {
         method: "POST",
         body: f,
@@ -152,13 +148,12 @@ function crearProducto(objetoImagen){
         "tipo_producto": document.getElementById('inputTipo').value,
         "fabricante": document.getElementById('inputFabricante').value,
         "precio": document.getElementById('inputPrecio').value,
-        "vendidos": 0,
         "images": objetoImagen.url,
         "stock": document.getElementById('inputStock').value,
         "fechaAgregado": dateTime,
         "descripcion": document.getElementById('inputDescripcion').value
     }
-    const url = `http://localhost:8000/productos`;
+    const url = `https://kameshop-api.herokuapp.com/productos`;
     fetch(url, {
         method: "POST",
         body: JSON.stringify(producto),

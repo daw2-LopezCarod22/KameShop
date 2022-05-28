@@ -2,7 +2,7 @@ import {borrarUsuario} from './borrarUsuario.js';
 import {cambiosMenus} from './cambiosMenu.js';
 cambiosMenus();
 var token = localStorage.getItem('token');
-    const url = `http://localhost:8000/users`;
+    const url = `https://kameshop-api.herokuapp.com/users`;
     fetch(url, {
         method: "GET",
         headers: {
