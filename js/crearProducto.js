@@ -2,7 +2,7 @@ import {cambiosMenus} from './cambiosMenu.js';
 cambiosMenus();
 if(window.location.search.split('?')[1]){
     var idProducto = window.location.search.split('?')[1];
-    fetch(`https://kameshop-api.herokuapp.com/${idProducto}`)
+    fetch(`https://kameshop-api.herokuapp.com/productos/${idProducto}`)
     .then((resultado) => resultado.json())
     .then((json) => editarProducto(json, idProducto));
 }
@@ -148,7 +148,7 @@ function crearProducto(objetoImagen){
         "tipo_producto": document.getElementById('inputTipo').value,
         "fabricante": document.getElementById('inputFabricante').value,
         "precio": document.getElementById('inputPrecio').value,
-        "images": objetoImagen.url,
+        "images": `http://kameshop-api.herokuapp.com/files/${objetoImagen.url.split('/')[4]}`,
         "stock": document.getElementById('inputStock').value,
         "fechaAgregado": dateTime,
         "descripcion": document.getElementById('inputDescripcion').value

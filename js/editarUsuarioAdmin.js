@@ -2,7 +2,7 @@ import {cambiosMenus} from './cambiosMenu.js';
 cambiosMenus(true);
 var idUsuario = window.location.search.split('?')[1];
 var token = localStorage.getItem('token');
-const url = `https://kameshop-api.herokuapp.com/${idUsuario}`;
+const url = `https://kameshop-api.herokuapp.com/users/${idUsuario}`;
 if (idUsuario=='crear'){
     document.getElementById('titulo').innerHTML = `<h5 class="card-title">Crear nuevo usuario:</h5>`
 
