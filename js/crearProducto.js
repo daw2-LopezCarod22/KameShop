@@ -164,13 +164,14 @@ function crearProducto(objetoImagen){
     })
         .then(response => response.json())
         .then(json => {
-            Swal.fire({
+        console.log(objetoImagen.url.split('/')[2])
+            /*Swal.fire({
                 title: '¡Producto creado!',
                 text: `El producto ${json.nombre_producto} ha sido creado correctamente`,
                 icon: 'success'
             }).then(function() {
                 window.location.href = `http://127.0.0.1:5501/html/producto.html?${json.id}`;
-            });
+            });*/
         })
         .catch(err => console.log(err));
 }
