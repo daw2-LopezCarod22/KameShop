@@ -82,7 +82,7 @@ function editarProducto(json, id){
             "tipo_producto": document.getElementById('inputTipo').value,
             "fabricante": document.getElementById('inputFabricante').value,
             "precio": document.getElementById('inputPrecio').value,
-            "images": objetoImagen.url,
+            "images": `http://kameshop-api.herokuapp.com/files/${objetoImagen.url.split('/')[4]}`,
             "stock": document.getElementById('inputStock').value,
             "descripcion": document.getElementById('inputDescripcion').value
         }
