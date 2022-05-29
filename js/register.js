@@ -22,7 +22,7 @@ document.getElementById('registrarse').onclick = function(){
                 text: 'Gracias por unirte, ya puedes iniciar sesion',
                 icon: 'success'
             }).then(function() {
-                window.location.href = "../index.html";
+                window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io";
             });
         })
         .catch(err => console.log(err));

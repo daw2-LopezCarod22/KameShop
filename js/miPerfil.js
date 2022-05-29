@@ -46,7 +46,7 @@ function guardarCambiosPefil(){
             text: `Tu perfil ha sido actualizado correctamente`,
             type: 'success'
         }).then(function() {
-            window.location.href = "miPerfil.html";
+            window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io/html/miPerfil.html";
         });
     })
     .catch(err => console.log(err));

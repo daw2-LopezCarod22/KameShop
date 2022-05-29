@@ -31,7 +31,7 @@ function confirmarEliminar(id, nombre){
             title:`El producto ${nombre} ha sido eliminado`,
             icon:'success'
         }).then(function(){
-            window.location.href = "http://127.0.0.1:5501/";
+            window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io";
         })
     })
     .catch(err => console.log(err));

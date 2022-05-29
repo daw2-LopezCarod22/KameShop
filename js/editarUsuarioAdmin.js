@@ -96,7 +96,7 @@ function guardarCambiosEdit(username, email, password, rol, id){
                 text: `El usuario ${username} ha sido modificado correctamente`,
                 icon: 'success'
             }).then(function() {
-                window.location.href = "administrarUsuarios.html";
+                window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io/html/administrarUsuarios.html";
             });
         })
         .catch(err => console.log(err));
@@ -125,7 +125,7 @@ function crearUsuario(username, email, password, rol){
             text: `El usuario ${username} ha sido creado correctamente`,
             type: 'success'
         }).then(function() {
-            window.location.href = "administrarUsuarios.html";
+            window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io/html/administrarUsuarios.html";
         });
     })
     .catch(err => console.log(err));

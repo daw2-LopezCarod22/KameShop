@@ -30,7 +30,7 @@ function confirmarEliminar(username, id){
             title:`El usuario ${username} ha sido eliminado`,
             icon:'success'
         }).then(function(){
-            window.location.href = "administrarUsuarios.html";
+            window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io/html/administrarUsuarios.html";
         })
     })
     .catch(err => console.log(err));

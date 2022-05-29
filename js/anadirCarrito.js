@@ -33,7 +33,7 @@ function anadirCarrito(producto, vieneDeProducto){
                 return result;
             }).then((result) => {
                 if(result.isConfirmed){
-                    window.location.href = "http://127.0.0.1:5501/html/carrito.html";
+                    window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io/html/carrito.html";
                 }
             })
         } else {
@@ -48,7 +48,7 @@ function anadirCarrito(producto, vieneDeProducto){
                 confirmButtonText: 'Iniciar sesion'
                 }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = "http://127.0.0.1:5501/html/login.html";
+                    window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io/html/login.html";
                 }})
         }
 }

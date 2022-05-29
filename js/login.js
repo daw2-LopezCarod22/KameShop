@@ -42,14 +42,14 @@ function verMisDatos(){
             const username = json.username;
             if(username!=undefined){
                 localStorage.setItem('username', username);
-                window.location.href = "../index.html";
+                window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io";
             } else {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
                     text: '¡Email o contraseña incorrecta!',
                   }).then(function(){
-                    window.location.href = "login.html";
+                    window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io/html/login.html";
                   })
                 localStorage.clear();
             }

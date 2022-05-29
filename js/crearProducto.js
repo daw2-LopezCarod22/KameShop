@@ -102,7 +102,7 @@ function editarProducto(json, id){
                 text: 'El producto ha sido modificado correctamente',
                 icon: 'success'
             }).then(function() {
-                window.location.href = `http://127.0.0.1:5501/html/producto.html?${id}`;
+                window.location.href = `https://daw2-lopezcarod22.github.io/kameshop.github.io/html/producto.html?${id}`;
             });
         })
         .catch(err => console.log(err));
@@ -169,7 +169,7 @@ function crearProducto(objetoImagen){
                 text: `El producto ${json.nombre_producto} ha sido creado correctamente`,
                 icon: 'success'
             }).then(function() {
-                window.location.href = `http://127.0.0.1:5501/html/producto.html?${json.id}`;
+                window.location.href = `https://daw2-lopezcarod22.github.io/kameshop.github.io/html/producto.html?${json.id}`;
             });
         })
         .catch(err => console.log(err));
