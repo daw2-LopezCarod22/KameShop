@@ -2,7 +2,7 @@ import {cambiosMenus} from './cambiosMenu.js';
 cambiosMenus();
 if(window.location.search.split('?')[1]){
     var idProducto = window.location.search.split('?')[1];
-    fetch(`https://kameshop-api.herokuapp.com/productos/${idProducto}`)
+    fetch(`http://localhost:8000/productos/${idProducto}`)
     .then((resultado) => resultado.json())
     .then((json) => editarProducto(json, idProducto));
 }
@@ -54,7 +54,7 @@ function editarProducto(json, id){
         f.append('type' , 'producto')
         var token = localStorage.getItem('token')
         
-        var url="https://kameshop-api.herokuapp.com/files/upload"
+        var url="http://localhost:8000/files/upload"
         fetch(url, {
             method: "POST",
             body: f,
@@ -82,11 +82,11 @@ function editarProducto(json, id){
             "tipo_producto": document.getElementById('inputTipo').value,
             "fabricante": document.getElementById('inputFabricante').value,
             "precio": document.getElementById('inputPrecio').value,
-            "images": `https://kameshop-api.herokuapp.com/files/${objetoImagen.url.split('/')[4]}`,
+            "images": objetoImagen.url,
             "stock": document.getElementById('inputStock').value,
             "descripcion": document.getElementById('inputDescripcion').value
         }
-        const url = `https://kameshop-api.herokuapp.com/productos/${id}`;
+        const url = `http://localhost:8000/productos/${id}`;
         fetch(url, {
             method: "PUT",
             body: JSON.stringify(producto),
@@ -102,7 +102,7 @@ function editarProducto(json, id){
                 text: 'El producto ha sido modificado correctamente',
                 icon: 'success'
             }).then(function() {
-                window.location.href = `https://daw2-lopezcarod22.github.io/kameshop.github.io/html/producto.html?${id}`;
+                window.location.href = `http://127.0.0.1:5502/html/producto.html?${id}`;
             });
         })
         .catch(err => console.log(err));
@@ -116,7 +116,7 @@ document.getElementById('crearProducto').onclick = function(){
     f.append('type' , 'producto')
     var token = localStorage.getItem('token')
     
-    var url="https://kameshop-api.herokuapp.com/files/upload"
+    var url="http://localhost:8000/files/upload"
     fetch(url, {
         method: "POST",
         body: f,
@@ -148,12 +148,12 @@ function crearProducto(objetoImagen){
         "tipo_producto": document.getElementById('inputTipo').value,
         "fabricante": document.getElementById('inputFabricante').value,
         "precio": document.getElementById('inputPrecio').value,
-        "images": `http://kameshop-api.herokuapp.com/files/${objetoImagen.url.split('/')[4]}`,
+        "images": objetoImagen.url,
         "stock": document.getElementById('inputStock').value,
         "fechaAgregado": dateTime,
         "descripcion": document.getElementById('inputDescripcion').value
     }
-    const url = `https://kameshop-api.herokuapp.com/productos`;
+    const url = `http://localhost:8000/productos`;
     fetch(url, {
         method: "POST",
         body: JSON.stringify(producto),
@@ -169,7 +169,7 @@ function crearProducto(objetoImagen){
                 text: `El producto ${json.nombre_producto} ha sido creado correctamente`,
                 icon: 'success'
             }).then(function() {
-                window.location.href = `https://daw2-lopezcarod22.github.io/kameshop.github.io/html/producto.html?${json.id}`;
+                window.location.href = `http://127.0.0.1:5502/html/producto.html?${json.id}`;
             });
         })
         .catch(err => console.log(err));

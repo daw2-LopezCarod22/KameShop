@@ -2,7 +2,7 @@ import {borrarUsuario} from './borrarUsuario.js';
 import {cambiosMenus} from './cambiosMenu.js';
 cambiosMenus();
 var token = localStorage.getItem('token');
-    const url = `https://kameshop-api.herokuapp.com/users`;
+    const url = `http://localhost:8000/users`;
     fetch(url, {
         method: "GET",
         headers: {
@@ -24,7 +24,7 @@ var token = localStorage.getItem('token');
                                             </div>
                                             <div class="col-4">
                                                 <button class="btn btn-success">
-                                                <a class="sesion" href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/editarUsuarioAdmin.html?${json[i].id}"><i id="${json[i].id}Editar" class="fa-solid fa-pencil"></i></a>
+                                                <a class="sesion" href="editarUsuarioAdmin.html?${json[i].id}"><i id="${json[i].id}Editar" class="fa-solid fa-pencil"></i></a>
                                                 </button>
                                                 <button id="buttonBorrar${json[i].id}" class="btn btn-danger">
 

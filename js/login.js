@@ -5,7 +5,7 @@ document.getElementById('login').onclick=function(){
         "email": document.getElementById('inputEmail').value,
         "password": document.getElementById('inputPassword').value
     };
-    const url = `https://kameshop-api.herokuapp.com/auth/login`;
+    const url = `http://localhost:8000/auth/login`;
         fetch(url, {
             method: "POST",
             body: JSON.stringify(user),
@@ -28,7 +28,7 @@ document.getElementById('login').onclick=function(){
 }
 
 function verMisDatos(){
-    const url = `https://kameshop-api.herokuapp.com/auth/me/`;
+    const url = `http://localhost:8000/auth/me/`;
     var token = localStorage.getItem('token')
     fetch(url, {
         method: "GET",
@@ -42,14 +42,14 @@ function verMisDatos(){
             const username = json.username;
             if(username!=undefined){
                 localStorage.setItem('username', username);
-                window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io";
+                window.location.href = "../index.html";
             } else {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
                     text: '¡Email o contraseña incorrecta!',
                   }).then(function(){
-                    window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io/html/login.html";
+                    window.location.href = "login.html";
                   })
                 localStorage.clear();
             }
