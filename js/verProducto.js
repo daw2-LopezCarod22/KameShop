@@ -9,12 +9,12 @@ fetch(`https://kameshop-api.herokuapp.com/productos/${idProducto}`)
 
 function mostrarProducto(producto){
     var productoHTML = `<img class="img-fluid border border-2 rounded" src="${producto.images}" alt="imagen del producto">
-                            <h2>${producto.nombre_producto}</h2>
+                            <h2 class="col-lg-6">${producto.nombre_producto}</h2>
                             <p class="fw-bold">${producto.precio}€</p>
                             <p>Fabricante: ${producto.fabricante}</p>
                             <p>Descripcion: </p>
-                            <p>${producto.descripcion}</p>
-                            <div class="row">
+                            <p class="col-lg-6" >${producto.descripcion}</p>
+                            <div class="row col-lg-10">
                                 <div class="col-6 text-danger">
                                     <p>¡${producto.stock} restantes en stock!</p>
                                 </div>
