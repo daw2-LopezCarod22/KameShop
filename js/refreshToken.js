@@ -1,5 +1,5 @@
 document.getElementById('footer').onclick = function(){
-    const url = `http://localhost:8000/auth/me/`;
+    const url = `https://kameshop-api.herokuapp.com/auth/me/`;
     var token = localStorage.getItem('token')
     fetch(url, {
         method: "GET",
@@ -27,13 +27,13 @@ function refrescarToken(username, email, roles, refreshToken){
     const user = {
         "username": username,
         "email": email,
-        "roles": roles,
         "refreshToken": refreshToken,
     };
     console.log(user);
-    const url = `http://localhost:8000/auth/token`;
+    const url = `https://kameshop-api.herokuapp.com/auth/token`;
         fetch(url, {
             method: "POST",
+            body: JSON.stringify(user),
             headers: {
                 "Content-type": "application/json; charset=UTF-8", 
             }

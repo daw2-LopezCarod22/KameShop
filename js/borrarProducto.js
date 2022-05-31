@@ -15,7 +15,7 @@ function borrarProducto(id, nombre){
 }
 
 function confirmarEliminar(id, nombre){
-    const url = `http://localhost:8000/productos/${id}`;
+    const url = `https://kameshop-api.herokuapp.com/productos/${id}`;
     var token = localStorage.getItem('token')
     fetch(url, {
         method: "DELETE",
@@ -31,7 +31,7 @@ function confirmarEliminar(id, nombre){
             title:`El producto ${nombre} ha sido eliminado`,
             icon:'success'
         }).then(function(){
-            window.location.href = "http://127.0.0.1:5502/";
+            window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io";
         })
     })
     .catch(err => console.log(err));

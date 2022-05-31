@@ -60,3 +60,8 @@ textarea {
   width: 335px;
   height: 150px;
 }
+#formulario{
+  display:flex;
+    justify-content:center;
+
+}

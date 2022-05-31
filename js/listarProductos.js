@@ -2,7 +2,7 @@ import {borrarProducto} from './borrarProducto.js';
 import {anadirCarrito} from './anadirCarrito.js'
 
 function listarProductos(vieneDe){
-    fetch(`http://localhost:8000/productos`)
+    fetch(`https://kameshop-api.herokuapp.com/productos`)
         .then((resultado) => resultado.json())
         .then((json) => añadirProducto(json, vieneDe));
 }
@@ -12,7 +12,7 @@ function añadirProducto(jsonProducto, vieneDe){
     for(var i=0;i<jsonProducto.length;i++){
         var producto = `<div class=" col mb-5">
                             <div class="card h-100">
-                                <a class="productos" href="http://127.0.0.1:5502/html/producto.html?${jsonProducto[i].id}">
+                                <a class="productos" href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/producto.html?${jsonProducto[i].id}">
                                     <img class="img-thumbnail" src="${jsonProducto[i].images}" alt="imagen del producto" />
                                     <div class="card-body p-4">
                                         <div class="text-center">
@@ -41,7 +41,7 @@ function añadirProducto(jsonProducto, vieneDe){
             if(jsonProducto[i].tipo_producto==window.location.search.split('?')[1]||vieneDe==null){
                 var buttonBorrar = `<button id="buttonBorrar${jsonProducto[i].id}" class="btn btn-danger">
                                     </button>`
-                var buttonEditar = `<a href="http://127.0.0.1:5502/html/crearProducto.html?${jsonProducto[i].id}">
+                var buttonEditar = `<a href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/crearProducto.html?${jsonProducto[i].id}">
                                         <button class="btn btn-success">
                                             <i class="fa-solid fa-pencil"></i>
                                         </button>

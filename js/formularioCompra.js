@@ -8,6 +8,6 @@ document.getElementById('finalizarCompra').onclick = function(){
         text: 'Gracias por confiar en nosotros, en breve tu pedido sera enviado a tu domicilio',
         icon: 'success'
     }).then(function() {
-        window.location.href = "../index.html";
+        window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io";
     });
 }
