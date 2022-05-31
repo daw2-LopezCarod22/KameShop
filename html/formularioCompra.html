@@ -29,60 +29,68 @@
         </nav>
         <!-- Section-->
         <section class="py-5">
-            <div class="container px-4 mt-5">
-                <h2 class="offset-lg-4">Pedido</h2>
-                <div class="row mt-4">
-                    <p class="offset-lg-4">Nombre completo</p>
-                    <div class="col-6">
-                        <input class="form-text offset-lg-8" placeholder="Nombre" type="text">
-                      </div>
-                      <div class="col-6">
-                        <input class="form-text" placeholder="Apellido" type="text">
-                      </div>
-                </div>
-                <div class="row mt-4 offset-lg-4">
-                    <p>Correo electronico: </p>
-                    <div class="col-12 form-text">
-                        <input size="50" type="text">
+            <div class="container px-4 px-lg-5 offset-md-3">
+                <div class="row">
+                    <div class="col-sm-6 center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="">Pedido</h2>
+                            <div class="row mt-4">
+                                <p class="">Nombre completo</p>
+                                <div class="col-6">
+                                    <input class="form-text " placeholder="Nombre" type="text">
+                                </div>
+                                <div class="col-6">
+                                    <input class="form-text" placeholder="Apellido" type="text">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <p>Correo electronico: </p>
+                                <div class="col-12 form-text">
+                                    <input size="45" type="text">
+                                </div>
+                            </div>
+                            <div class="row mt-4 ">
+                                <p>Dirección de entrega: </p>
+                                <div class="col-12">
+                                    <input class="form-text" size="45" placeholder="Dirección" type="text">
+                                </div>
+                            </div>
+                            <div class="row py-2 ">
+                                <div class="col-12">
+                                    <input class="form-text" size="45" placeholder="Dirección 2ª(Opcional)"  type="text">
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-6">
+                                    <input class=" form-text" placeholder="Ciudad" type="text">
+                                </div>
+                                <div class="col-6">
+                                    <input class="form-text" placeholder="Region/Provincia/Estado" type="text">
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-6">
+                                    <input class=" form-text" placeholder="Codigo postal" type="text">
+                                </div>
+                                <div class="col-6">
+                                    <input class="form-text" placeholder="País" type="text">
+                                </div>
+                            </div>
+                            <div class="row py-4 ">
+                                <p class="fw-bold">Por favor, agregue cualquier detalle que sea relevante para la entrega de su pedido</p>
+                                <div class="col-12">
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <button id="finalizarCompra" type="button" class="btn btn-primary">Finalizar compra</button>
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-4 offset-lg-4">
-                    <p>Dirección de entrega: </p>
-                    <div class="col-12">
-                        <input class="form-text" size="50" placeholder="Dirección" type="text">
-                    </div>
-                </div>
-                <div class="row py-2 offset-lg-4">
-                    <div class="col-12">
-                        <input class="form-text" size="50" placeholder="Dirección 2ª(Opcional)"  type="text">
-                    </div>
-                </div>
-                <div class="row py-2">
-                    <div class="col-6">
-                        <input class="offset-lg-8 form-text" placeholder="Ciudad" type="text">
-                      </div>
-                      <div class="col-6">
-                        <input class="form-text" placeholder="Region/Provincia/Estado" type="text">
-                      </div>
-                </div>
-                <div class="row py-2">
-                    <div class="col-6">
-                        <input class="offset-lg-8 form-text" placeholder="Codigo postal" type="text">
-                      </div>
-                      <div class="col-6">
-                        <input class="form-text" placeholder="País" type="text">
-                      </div>
-                </div>
-                <div class="row py-4 offset-lg-4">
-                    <p class="fw-bold">Por favor, agregue cualquier detalle que sea relevante para la entrega de su pedido</p>
-                    <div class="col-12">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
                     </div>
                 </div>
             </div>
-            <div class="text-center py-4">
-                <button id="finalizarCompra" type="button" class="btn btn-primary">Finalizar compra</button>
-              </div>
         </section>
         <!-- pie de pagina -->
         <footer class="py-5 bg-dark">
