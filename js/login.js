@@ -1,7 +1,5 @@
 import {cambiosMenus} from './cambiosMenu.js';
-import { cerrarSesionToken } from './cerrarSesionToken.js';
 cambiosMenus();
-cerrarSesionToken();
 document.getElementById('login').onclick=function(){
     const user = {
         "email": document.getElementById('inputEmail').value,
