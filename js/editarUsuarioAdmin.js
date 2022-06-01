@@ -1,5 +1,7 @@
 import {cambiosMenus} from './cambiosMenu.js';
-cambiosMenus(true);
+import { cerrarSesionToken } from './cerrarSesionToken.js';
+cambiosMenus();
+cerrarSesionToken();
 var idUsuario = window.location.search.split('?')[1];
 var token = localStorage.getItem('token');
 const url = `https://kameshop-api.herokuapp.com/users/${idUsuario}`;

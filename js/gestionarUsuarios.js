@@ -1,6 +1,8 @@
 import {borrarUsuario} from './borrarUsuario.js';
 import {cambiosMenus} from './cambiosMenu.js';
+import { cerrarSesionToken } from './cerrarSesionToken.js';
 cambiosMenus();
+cerrarSesionToken();
 var token = localStorage.getItem('token');
     const url = `https://kameshop-api.herokuapp.com/users`;
     fetch(url, {

@@ -1,5 +1,7 @@
 import {cambiosMenus} from './cambiosMenu.js';
+import { cerrarSesionToken } from './cerrarSesionToken.js';
 cambiosMenus();
+cerrarSesionToken();
 if(window.location.search.split('?')[1]){
     var idProducto = window.location.search.split('?')[1];
     fetch(`https://kameshop-api.herokuapp.com/productos/${idProducto}`)

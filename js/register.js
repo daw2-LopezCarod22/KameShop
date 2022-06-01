@@ -1,5 +1,7 @@
 import {cambiosMenus} from './cambiosMenu.js';
-cambiosMenus(true);
+import { cerrarSesionToken } from './cerrarSesionToken.js';
+cambiosMenus();
+cerrarSesionToken();
 document.getElementById('registrarse').onclick = function(){
     
     const user = {

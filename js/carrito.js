@@ -1,5 +1,7 @@
 import {cambiosMenus} from './cambiosMenu.js';
+import { cerrarSesionToken } from './cerrarSesionToken.js';
 cambiosMenus();
+cerrarSesionToken();
 var carrito = JSON.parse(localStorage.getItem('carrito'));
 actualizarDatos()
 if(carrito.length==0){

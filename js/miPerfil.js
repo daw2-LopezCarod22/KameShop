@@ -1,5 +1,7 @@
 import {cambiosMenus} from './cambiosMenu.js';
+import { cerrarSesionToken } from './cerrarSesionToken.js';
 cambiosMenus();
+cerrarSesionToken();
 const url = `https://kameshop-api.herokuapp.com/auth/me/`;
 var token = localStorage.getItem('token')
 fetch(url, {

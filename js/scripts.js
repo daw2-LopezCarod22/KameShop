@@ -1,5 +1,7 @@
 import {cambiosMenus} from './cambiosMenu.js';
 import { listarProductos } from './listarProductos.js';
+import { cerrarSesionToken } from './cerrarSesionToken.js';
+cerrarSesionToken();
 
 if(localStorage.getItem("token") != null){
     var bienvenida = document.createElement('h2');

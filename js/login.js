@@ -1,5 +1,7 @@
 import {cambiosMenus} from './cambiosMenu.js';
-cambiosMenus(true);
+import { cerrarSesionToken } from './cerrarSesionToken.js';
+cambiosMenus();
+cerrarSesionToken();
 document.getElementById('login').onclick=function(){
     const user = {
         "email": document.getElementById('inputEmail').value,
@@ -49,9 +51,10 @@ function verMisDatos(){
                     title: 'Oops...',
                     text: '¡Email o contraseña incorrecta!',
                   }).then(function(){
+                    localStorage.clear();
+                  }).then(function(){
                     window.location.href = "https://daw2-lopezcarod22.github.io/kameshop.github.io/html/login.html";
-                  })
-                localStorage.clear();
+                })
             }
         })
         .catch(err => console.log(err));

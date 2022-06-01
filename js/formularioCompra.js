@@ -1,5 +1,7 @@
 import {cambiosMenus} from './cambiosMenu.js';
+import { cerrarSesionToken } from './cerrarSesionToken.js';
 cambiosMenus();
+cerrarSesionToken();
 document.getElementById('finalizarCompra').onclick = function(){
     const carrito = JSON.stringify([]);
     localStorage.setItem('carrito', carrito)
