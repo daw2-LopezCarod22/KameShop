@@ -21,8 +21,8 @@ function cambiosMenus(){
             logout();
         }
     } else{
-        var botonIniciarRegistrarse = `<a href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/login.html"><button type="button" class="sesion btn btn-primary">Iniciar Sesion</button></a>
-        <a href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/register.html"><button type="button" class="sesion btn btn-success">Registrarse</button></a>`
+        var botonIniciarRegistrarse = `<button type="button" class="sesion btn btn-primary"><a href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/login.html">Iniciar Sesion</a></button>
+        <button type="button" class="sesion btn btn-success"><a href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/register.html">Registrarse</a></button>`
         document.getElementById('listaMenu').innerHTML += botonIniciarRegistrarse;
     }
 }
