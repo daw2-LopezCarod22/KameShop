@@ -1,4 +1,4 @@
-document.getElementById('footer').onclick = function(){
+/*document.getElementById('footer').onclick = function(){
     const url = `https://kameshop-api.herokuapp.com/auth/me/`;
     var token = localStorage.getItem('token')
     fetch(url, {
@@ -43,4 +43,4 @@ function refrescarToken(username, email, roles, refreshToken){
             console.log(`tu nuevo token es ${json.refreshToken} - ${json.token}`)
         })
         .catch(err => console.log(err));
-}
+}*/
