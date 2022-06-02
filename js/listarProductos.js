@@ -9,7 +9,13 @@ function listarProductos(vieneDe){
 
 function añadirProducto(jsonProducto, vieneDe){
     console.log(jsonProducto)
-    for(var i=0;i<jsonProducto.length;i++){
+    var resultados=0;
+    if (vieneDe!='busqueda'){
+        resultados = 8;
+    } else {
+        resultados = jsonProducto.length;
+    }
+    for(var i=0;i<resultados;i++){
         var producto = `<div class=" col mb-5">
                             <div class="card h-100">
                                 <a class="productos" href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/producto.html?${jsonProducto[i].id}">
