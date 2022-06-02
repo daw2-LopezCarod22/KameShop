@@ -11,10 +11,10 @@ function cambiosMenus(){
         document.getElementById('carrito').innerHTML = botonCarrito;
         var botonCerrarSesion = `<button type="button" id="logout" class="sesion btn btn-danger">Cerrar Sesion</button>`
         document.getElementById('listaMenu').innerHTML += botonCerrarSesion;
-        var botonMiPerfil = `<a href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/miPerfil.html"><button type="button" class="sesion btn btn-success">Mi perfil</button></a>`
+        var botonMiPerfil = `<button type="button" class="sesion btn btn-success"><a href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/miPerfil.html">Mi perfil</a></button>`
         document.getElementById('listaMenu').innerHTML += botonMiPerfil;
         if(localStorage.getItem("username") == 'admin'){
-            var botonPanelAdministrador = `<a href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/panelAdministrador.html"><button type="button" id="panelAdministrador" class="sesion btn btn-secondary">Panel de administrador</button></a>`
+            var botonPanelAdministrador = `<button type="button" id="panelAdministrador" class="sesion btn btn-secondary"><a href="https://daw2-lopezcarod22.github.io/kameshop.github.io/html/panelAdministrador.html">Panel de administrador</a></button>`
             document.getElementById('listaMenu').innerHTML += botonPanelAdministrador;
         }
         document.getElementById('logout').onclick = function(){
