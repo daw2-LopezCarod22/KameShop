@@ -18,7 +18,9 @@ document.getElementById('registrarse').onclick = function(){
         })
         .then(response => response.json())
         .then(json => {
-            if(json.username!=undefined){
+            var regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            console.log(regexEmail.test(document.getElementById('inputEmail').value));
+            if(json.username!=undefined&&regexEmail.test(document.getElementById('inputEmail').value)!=false){
                 Swal.fire({
                     title: '¡Usuario registrado!',
                     text: 'Gracias por unirte, ya puedes iniciar sesion',
